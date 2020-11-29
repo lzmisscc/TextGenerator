@@ -8,18 +8,18 @@ from functools import reduce
 
 
 def show():
-    p = "output/data/1a40f45595a67e0da16ec7dbd8a3150b5bd8d808.json"
+    p = "output/data/1e7d2a221fe1473dc14a8925aebc9ee13eacd06d.json"
     with open(p, "r") as f:
         data = json.load(f,)
     p = p.replace(".json", ".png").replace('data/', 'img/pic/pic_')
-    image = Image.open(p).convert("RGBA")
+    image = Image.open(p)
     draw = ImageDraw.Draw(image, mode="RGBA")
     for i in data["fragment"]:
         rotate_box = i['rotate_box']
         res = []
         for i in rotate_box:
             res += i
-        draw.polygon(res, fill=(1, 100, 1, 100), )
+        draw.polygon(res, fill=(255, 100, 1, 200), )
     image.save("image.png")
 
     return

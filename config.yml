@@ -23,7 +23,7 @@ provider:
     - name: chinese
       path: assets/corpus/Chinese_Names_Corpus（120W）.txt
       probability: 0.3
-      type: word
+      type: line
       len_range: (2,10)
     - name: random_character
       path: assets/corpus/chinese_synthetic.txt
@@ -61,7 +61,7 @@ provider:
     # 文字贴图json信息输出路径
     text_img_info_output_dir: output/text_img_info
     # 字体最小尺寸
-    font_min_size: 15
+    font_min_size: 30
     # 字体最大尺寸
     font_max_size: 100
     # 使用指定颜色作为文本颜色的概率（相对于自动选取颜色）
